@@ -1,0 +1,36 @@
+.table__container {
+  display: inline-block;
+}
+
+.table__title {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.table__cell {
+  border: 2px solid #2b7827;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.table__cell:hover {
+  background-color: #cbdfcb;
+}
+
+.table__cell--selected,
+.table__cell--selected:hover {
+  background-color: red;
+  color: white;
+}
+.table__cell-content {
+  min-width: 50px;
+  min-height: 50px;
+  display: grid;
+  font-size: 18px;
+  font-weight: 400;
+  align-content: center;
+  margin: 4px;
+}
