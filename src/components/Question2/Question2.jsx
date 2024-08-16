@@ -69,7 +69,7 @@ const Question2 = () => {
           name: key,
           amount: value,
         }))
-        .sort((a, b) => Object.values(b)[0] - Object.values(a)[0]);
+        .sort((a, b) => b.amount - a.amount);
     });
 
     return report;
@@ -89,7 +89,7 @@ const Question2 = () => {
       <ul className="question2__list">
         {report.threat.map(({ name, amount }) => {
           return (
-            <li>
+            <li key={name}>
               - {name}: {amount}
             </li>
           );
@@ -99,7 +99,7 @@ const Question2 = () => {
       <ul className="question2__list">
         {report.countryCode.map(({ name, amount }) => {
           return (
-            <li>
+            <li key={name}>
               - {name}: {amount}
             </li>
           );
